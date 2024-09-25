@@ -1,0 +1,20 @@
+
+% .\dlv.mingw.exe OWL2_RL\OWL2_RL_reasoner_with_DLV.asp OWL2_RL\tests\02_test_cls-int-2.asp 
+
+% TEST cls-int-2
+
+t(iri(":X"), iri("rdf:type"), iri(":INTERSECTION")).
+
+t(bnode("_:b0"), iri("rdf:first"), iri(":CLASS1")).
+t(bnode("_:b0"), iri("rdf:rest"), bnode("_:b1")).
+t(bnode("_:b1"), iri("rdf:first"), iri(":CLASS2")).
+t(bnode("_:b1"), iri("rdf:rest"), bnode("_:b2")).
+t(bnode("_:b2"), iri("rdf:first"), iri(":CLASS3")).
+t(bnode("_:b2"), iri("rdf:rest"), iri("rdf:nil")).
+
+t(iri(":INTERSECTION"), iri("owl:intersectionOf"), bnode("_:b0")).
+
+% RESULT:
+% t(iri(":X"),iri("rdf:type"),iri(":CLASS1")), 
+% t(iri(":X"),iri("rdf:type"),iri(":CLASS2")), 
+% t(iri(":X"),iri("rdf:type"),iri(":CLASS3"))
