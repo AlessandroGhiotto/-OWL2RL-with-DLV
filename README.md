@@ -2,7 +2,7 @@
 
 [OWL 2 RL](https://www.w3.org/TR/owl2-profiles/#Reasoning_in_OWL_2_RL_and_RDF_Graphs_using_Rules)
 is a subset of OWL 2 which is amenable to implementation using rule-based technologies.
-Here I implement an OWL 2 RL reasoner with DLV.
+Here I implement an OWL 2 RL reasoner with [DLV](https://www.dlvsystem.it/dlvsite/dlv-user-manual/).
 
 The only predicate that we are going to use is `t(S, P, O)`
 which represents a triple with subject S, predicate P and object O. In order to distinguish between
@@ -10,8 +10,9 @@ IRIs, literals and blank nodes we can use the function symbols _iri_, _literal_ 
 
 For example, the triples:
 
-```prolog
-    ex:bob foaf:knows _:x . _:x foaf:age 21 .
+```
+    ex:bob foaf:knows _:x .
+    _:x foaf:age 21 .
 ```
 
 can be represented as
@@ -47,8 +48,8 @@ Here I have listed all the rules implemented. Parts 7, 10 and 11 extend OWL 2 RL
 
 ### Executing program
 
-For running the OWL2_RL reasoner on your knowledge base you need to print in the terminal the path to the DLV executable, the path to the file "OWL2_RL_reasoner_with_DLV.asp" and the path to the file containing your knowlege base
+For running the OWL2_RL reasoner on your knowledge base you need to print in the terminal the path to the DLV executable, the path to the file "OWL2_RL_reasoner_with_DLV.dlv" and the path to the file containing your knowlege base
 
 ```
-<path-to\dlv-exectuable> <path-to\OWL2_RL_reasoner_with_DLV.asp> <path-to\your-kb>
+<path-to\dlv-exectuable> <path-to\OWL2_RL_reasoner_with_DLV.dlv> <path-to\your-kb>
 ```

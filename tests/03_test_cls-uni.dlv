@@ -1,5 +1,5 @@
 
-% .\dlv.mingw.exe OWL2_RL\OWL2_RL_reasoner_with_DLV.asp OWL2_RL\tests\03_test_cls-uni.asp  
+% .\dlv.mingw.exe OWL2_RL\OWL2_RL_reasoner_with_DLV.dlv OWL2_RL\tests\03_test_cls-uni.dlv
 
 % TEST cls-uni
 
