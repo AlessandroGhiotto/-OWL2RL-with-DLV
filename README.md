@@ -51,5 +51,5 @@ Here I have listed all the rules implemented. Parts 7, 10 and 11 extend OWL 2 RL
 For running the OWL2_RL reasoner on your knowledge base you need to print in the terminal the path to the DLV executable, the path to the file "OWL2_RL_reasoner_with_DLV.dlv" and the path to the file containing your knowlege base
 
 ```
-<path-to\dlv-exectuable> <path-to\OWL2_RL_reasoner_with_DLV.dlv> <path-to\your-kb>
+<path-to\dlv-executable> <path-to\OWL2_RL_reasoner_with_DLV.dlv> <path-to\your-kb>
 ```
